@@ -27,6 +27,8 @@ ___________________________________________________________
 
 `2. El Caso de DataStream Inc.`
 
+Entregable Esperado
+
 · Diagnóstico escrito del problema de DataStream (máximo 200 palabras).
 
 El procesamiento ha pasado de “segundos” a 47 minutos al aumentar los datos 50×. Los cálculos indican que el tiempo creció muchísimo más que la entrada: el comportamiento empírico es cercano a cuadrático O(n^2); probablemente porque hay comparaciones pareadas, joins no indexados o algoritmos de fuerza bruta. Además solo el 25% del trabajo es paralelizable (Amdahl), por eso triplicar máquinas da solo +20%. Más RAM sin cambiar algoritmo no reduce la cantidad de operaciones asintóticas ni la sección serial, por eso no resolvería el cuello de botella principal.
