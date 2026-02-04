@@ -55,3 +55,19 @@ Costo amortizado por inserción ≈ 2 → O(1) amortizado
 Informe breve (150 palabras) explicando a un gerente no técnico por qué el sistema era lento
 
 El sistema se vuelve lento porque cada vez que se agrega un producto nuevo, el programa está copiando toda la lista de productos existente a una nueva lista ligeramente más grande. Con 500,000 productos, agregar el producto 500,001 requiere copiar medio millón de registros. Esto ocurre con cada producto nuevo, haciendo que el tiempo de inserción crezca cuadráticamente. La solución es cambiar a un sistema que duplique el espacio cuando sea necesario, reduciendo drásticamente las copias y manteniendo el sistema rápido incluso con millones de productos.
+
+---
+
+- **Checkpoint Metacognitivo - Fase COMPRENDE**
+
+¿Puedo explicar con mis propias palabras por qué arr[i] es O(1) usando la fórmula de dirección?
+Sí, porque la memoria es contigua y la dirección se calcula con una fórmula matemática simple: dirección_base + (índice × tamaño_elemento). No importa si es el primer o el último elemento, el cálculo es directo y no depende del tamaño del arreglo.
+
+¿Qué imagen mental tengo ahora de un arreglo en memoria?
+Lo visualizo como una fila de cajas numeradas consecutivas, donde cada caja tiene una dirección predecible. Antes lo veía como una "lista" abstracta; ahora veo direcciones de memoria y saltos fijos entre elementos.
+
+Si me preguntaran "¿por qué insertar al inicio es O(n)?", ¿podría dibujarlo paso a paso?
+Sí: dibujaría un arreglo con elementos, mostraría que para insertar al inicio debo mover cada elemento una casilla a la derecha, uno por uno, antes de colocar el nuevo valor en la primera posición.
+
+¿Qué conexión veo entre el análisis de complejidad de la Semana 1 y las operaciones de arreglos?
+La Semana 1 me enseñó a clasificar algoritmos como O(1), O(n), O(n²). Ahora veo que cada operación de arreglos tiene una complejidad específica y predecible según su posición, y puedo justificarla con el modelo de memoria y desplazamientos.
